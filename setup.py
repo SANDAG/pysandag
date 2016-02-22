@@ -17,7 +17,8 @@ with open(path.join(here, 'README.MD'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name=pysandag.__version__,
+    name='pysandag',
+    version=pysandag.__version__,
 
     description= '',
     long_description = long_description,
@@ -41,8 +42,5 @@ setup(
 
     packages=find_packages(),
 
-    install_requires = [
-        'osgeo',
-        'yaml'
-    ]
+    install_requires = []
 )
