@@ -2,14 +2,14 @@ in_db:
     sql_alchemy_driver: mssql+pyodbc
     #MAKE sure to pick the right driver
     driver: SQL+Server+Native+Client+11.0
-    host: 
-    database: 
+    host: sqlserverdatabase
+    database: a_database_name
     #IF using default, you do not need to specify
     port:
     #WITH Native Client, you may not need username
-    user:
+    user: user_name
     #WITH Native Client, you may not need password
-    password:
+    password: a_password
 out_db:
     sql_alchemy_driver: postgresql
     #Not always needed
