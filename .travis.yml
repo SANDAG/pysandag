@@ -1,8 +1,14 @@
 language: python
+
 python:
   - "2.7"
-# command to install dependencies
+
 install:
   - pip install pyyaml
-# command to run tests
-script: nosetests
+  - pip install python-coveralls
+
+script:
+  - nosetests
+
+after_success:
+  - coveralls
