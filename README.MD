@@ -15,9 +15,9 @@ The installation uses the standard python setuptools package. To install this pa
    
 ## Methods
 ```python
-from pysandag import database.get_connection_string(cfg_file, cfg_section)
+from pysandag.database import get_connection_string(cfg_file, cfg_section)
 ```
 
 ```python
-from pysandag import gis.transform_wkt(geom_wkt)
+from pysandag.gis import transform_wkt(geom_wkt)
 ```

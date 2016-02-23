@@ -1,11 +1,15 @@
 """
 Database utility functions commonly used at SANDAG.
 """
-
 import yaml
 
 
 def get_connection_string(cfg_file, cfg_section):
+    with open(cfg_file, 'r') as db_config_file:
+        return _get_connection_string_from_stream(yaml.load(db_config_file), cfg_section)
+
+
+def _get_connection_string_from_stream(in_stream, cfg_section):
     """
     Function to read a given YAML file's specific
     section and build a SQLAlchemy connection string.
@@ -17,16 +21,13 @@ def get_connection_string(cfg_file, cfg_section):
     Returns:
         (string): SQLAlchemy connection string
     """
-    with open(cfg_file, 'r') as db_config_file:
-        db_cfg = yaml.load(db_config_file)
-
-    alchemy_driver = db_cfg[cfg_section]['sql_alchemy_driver']
-    driver = db_cfg[cfg_section]['driver']
-    host = db_cfg[cfg_section]['host']
-    database = db_cfg[cfg_section]['database']
-    port = db_cfg[cfg_section]['port']
-    user = db_cfg[cfg_section]['user']
-    password = db_cfg[cfg_section]['password']
+    alchemy_driver = in_stream[cfg_section]['sql_alchemy_driver']
+    driver = in_stream[cfg_section]['driver']
+    host = in_stream[cfg_section]['host']
+    database = in_stream[cfg_section]['database']
+    port = in_stream[cfg_section]['port']
+    user = in_stream[cfg_section]['user']
+    password = in_stream[cfg_section]['password']
 
     if user is not None and password is not None:
         credentials = "{0}:{1}@".format(user, password)
