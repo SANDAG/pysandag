@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/SANDAG/pysandag/badge.svg?branch=master)](https://coveralls.io/github/SANDAG/pysandag?branch=master)
+
 # pysandag
 
 pysandag is a utility package containing commonly used classes and methods that are used across
