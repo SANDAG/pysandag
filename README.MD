@@ -1,4 +1,5 @@
 [![Coverage Status](https://coveralls.io/repos/github/SANDAG/pysandag/badge.svg?branch=master)](https://coveralls.io/github/SANDAG/pysandag?branch=master)
+[![Build Status](https://travis-ci.org/SANDAG/pysandag.svg?branch=master)](https://travis-ci.org/SANDAG/pysandag)
 
 # pysandag
 
