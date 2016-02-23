@@ -5,6 +5,7 @@ python:
 
 install:
   - pip install pyyaml
+  - pip install coveralls
 
 script:
   - nosetests
