@@ -1,7 +1,7 @@
 """
 GIS utility functions commonly used at SANDAG.
 """
-from osgeo import osr
+from osgeo import ogr, osr
 
 # Setup State Plane to WGS Transformation
 source = osr.SpatialReference()
